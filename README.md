@@ -7,6 +7,7 @@
 
 #angular1.x模块扩展
 
+```javascript
 
 "use strict";
 //自定义--指令，提供移动端触摸
@@ -15,7 +16,7 @@ angular.module("ngTouchmove", []).directive("ngTouchmove", function() {
         controller: function($scope, $element, $attrs) {
             //进入移动端时监听touchstart事件
             $element.bind('touchstart', onTouchStart);
-            
+
             //处理touchstart事件
             function onTouchStart(event) {
                 //event.preventDefault();
@@ -42,5 +43,6 @@ angular.module("ngTouchmove", []).directive("ngTouchmove", function() {
     };
 });
 
+```
 
 [查看项目](demo.web101.cn/responselayout)
