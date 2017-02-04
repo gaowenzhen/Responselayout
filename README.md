@@ -1,3 +1,5 @@
+[查看项目](demo.web101.cn/responselayout)
+
 #响应布局项目模板
 > 这个应用的布局css，能分出浏览器，是在移动设备下或在桌面模式下浏览，如果是移动设备下就能开启Touchmove事件，如果非移动设备，Touchmove事件就部不起作用皮肤部分的html是统一的，就一套html，css部分用到了@media来控制实现的。
 
