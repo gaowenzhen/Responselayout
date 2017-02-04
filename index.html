@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">   
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!--开启界面支持触摸-->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <meta name="description" content="这里是网页的描述，是给搜索引擎看的，搜索引擎根据这个描述进行收录排名，一般是网页内的关键字。 ">
+
+    <title>gaowenzhe响应布局例子</title>
+    <!--全局css类，公共的-->
+    <link rel="stylesheet" href="lib/materialize/css/materialize.min.css">
+
+   <!--图标类库-->
+    <link rel="stylesheet" type="text/css" href="css/FortAwesome/css/font-awesome.min.css">
+
+    <script src="lib/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+
+     <!--自定义的angular模块，内部就一个directive-->
+    <script src="lib/angular/ngTouchmove.js" type="text/javascript" charset="utf-8"></script>
+
+     <!--准备的路由，后续可以用上-->
+    <script src="lib/angular/angular-ui-router.min.js" type="text/javascript" charset="utf-8"></script>
+
+    
+    <!--一个angular应用-->
+    <script src="myapp/myapp.js" type="text/javascript" charset="utf-8"></script>
+
+   <!--补充了当前模块的css样式--> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="myapp" ng-touchmove="onTouchmove()" ng-touchstart="onTouchstart()">
+    <header ng-controller="navctroll">
+        <nav class="teal lighten-1 manav">
+            <div class="nav-wrapper">
+                <ul class="right">
+                    <li><a href="">栏目1</a></li>
+                    <li><a href="">栏目2</a></li>
+                    <li><a href="">栏目3</a></li>
+                    <li ng-click="openanv()" ng-mouseleave="mouseleave()">
+                        <a href="" ng-class="{'aulactive':aulactive}" class="dropdown-button">下拉菜单<i class="fa fa-sort-desc right"></i></a>
+                        <ul ng-mouseleave="mouseleave()" ng-mouseover="mouseover()" ng-class="{'dropactive':aulactive}" class="dropdown-content">
+                            <li><i class="fa fa-cab"></i>我的订单</li>
+                            <li><i class="fa fa-pie-chart"></i>我的权限</li>
+                            <li><i class="fa fa-rmb"></i>我的钱包</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        
+        <div class="container"><a href="" ng-click="openleftminu()" class="button-collapse top-nav full hide-on-large-only"><i class="fa fa-bars"></i></a></div>
+
+
+
+        <ui class="side-nav fixed" ng-class="{'openactive':openleactive,'colosactive':openleactive ==false}">
+            <li class="logo">
+                <div>gaowenzhen@msn.com</div>                
+            </li>
+            <li class="bold"><a href="">源代码github</a></li>
+            <li class="bold"><a href="">左边菜单1</a></li>
+            <li class="bold"><a href="">左边菜单2</a></li>
+            <li class="bold"><a href="">左边菜单3</a></li>
+            <li class="bold"><a href="">左边菜单4</a></li>
+            <li class="bold"><a href="">左边菜单5</a></li>
+            <li class="bold"><a href="">左边菜单6</a></li>
+        </ui>
+        <div ng-click="openleftminu()" ng-show="openleactive" class="sidenav-overlay"></div>
+    </header>
+    <main>
+        <div class="container section">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="placeholder valign-wrapper">
+                     <h5 class="valign center">内容1</h5>
+                    </div>
+                    <h6>小屏s12全屏，中屏以上m4-3列</h6>
+                </div>
+                <div class="col s12 m4">
+                    <div class="placeholder valign-wrapper">
+                    <h5 class="valign center">内容2</h5>
+                    </div>
+                    <h6>小屏s12全屏，中屏以上m4-3列</h6>
+                </div>
+                <div class="col s12 m4">
+                    <div class="placeholder valign-wrapper">
+                    <h5 class="valign center">内容3</h5>
+                    </div>
+                    <h6>小屏s12全屏，中屏以上m4-3列</h6>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
